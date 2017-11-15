@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>NUber</title>
+	<meta name="description" content="CSS only mobile first navigation">
+	<meta name="author" content="Ian Yates">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="site.css">
+	
+	<script type="text/javascript">
+		$(document).on("click", ".cancel", function(e) {
+			bootbox.confirm({ 
+				size: "small",
+				title: "Are you sure?",
+				message: "The current booked ride will be cancelled.", 
+				animate: true,
+				backdrop: true,
+				callback: function(result){ if(result){
+					window.location= "home.html";
+				}}
+			})
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1 class="logo"><a href="">NUber</a></h1>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h1 class="page-header">SLOT BOOKED</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<img src="img.jpg" class="img-fluid" alt="Responsive image">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center ride1">
+				<label for="rideTime">ETA:</label><span class="r1">09:15 PM</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center ride2">
+				<label for="rideTime">Pickup Location:</label><span class="r1">Snell Library</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center ride2">
+				<button type="button" class="btn btn-secondary btn-xl">Track My Ride</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center ride2">
+				<button type="button" class="btn btn-secondary btn-xl cancel">Cancel Ride</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
