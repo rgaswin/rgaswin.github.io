@@ -37,6 +37,11 @@
         var domUserName = $("#inputUserName").val();
         var domPwd = $("#inputPassword").val();
 
+
+        var username2 = "driver";
+        var pwd2 = "driver";
+       
+
         if (domUserName != username && domPwd != pwd) {
             $("#failedMsg").show();
             $("#successMsg").hide();
@@ -46,6 +51,17 @@
             $("#successMsg").show();
             $("#failedMsg").hide();
             window.location = "book.html";
+        }
+
+         if (domUserName != username2 && domPwd2 != pwd) {
+            $("#failedMsg").show();
+            $("#successMsg").hide();
+         }
+
+         else {
+            $("#successMsg").show();
+            $("#failedMsg").hide();
+            window.location = "lostfound.html";
         }
 
     }
@@ -103,6 +119,16 @@
             <div id="failedMsg" class="alert alert-danger" role="alert">Invalid login credentials</div>
             <div id="successMsg" class="alert alert-success" role="alert">Login Success</div>
             <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="type" class="col-sm-2 control-label">Login Type</label>
+                    <div class="col-sm-8">
+                    <select id="type" class="form-control">
+                        <option value="rider">Rider</option>
+                        <option value="driver">Driver</option>
+                    </select>
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <label for="inputUserName" class="col-sm-2 control-label">User Name</label>
                     <div class="col-sm-8">
