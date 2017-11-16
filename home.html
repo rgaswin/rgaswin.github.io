@@ -12,7 +12,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
+
     <link rel="stylesheet" href="site.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,74 +22,79 @@
              text-decoration: none;
           }
     </style>
-    
+
 <script type="text/javascript">
-    $(document).ready(function() {
-      $("#failedMsg").hide();
-      $("#successMsg").hide();
-      window.document.documentElement.webkitRequestFullscreen.call(window.document.documentElement);
+    $(document).ready(function () {
+        $("#failedMsg").hide();
+        $("#successMsg").hide();
+        window.document.documentElement.webkitRequestFullscreen.call(window.document.documentElement);
 
     });
-  
-    function validate(){
-          var username = "admin";
-          var pwd = "admin";
-          var domUserName = $("#inputUserName").val();
-          var domPwd = $("#inputPassword").val();
-          
-          if(domUserName != username && domPwd != pwd){
-                $("#failedMsg").show();
-                $("#successMsg").hide();
 
-          }
-          else{
-                $("#successMsg").show();
-                 $("#failedMsg").hide();
-                    window.location= "book.html";
-          }
-          
+    function validate() {
+        var username = "admin";
+        var pwd = "admin";
+        var domUserName = $("#inputUserName").val();
+        var domPwd = $("#inputPassword").val();
+
+        if (domUserName != username && domPwd != pwd) {
+            $("#failedMsg").show();
+            $("#successMsg").hide();
+
+        }
+        else {
+            $("#successMsg").show();
+            $("#failedMsg").hide();
+            window.location = "book.html";
+        }
+
     }
 
 </script>
 
- 
+
 </head>
 
 
 <body onload="window.scrollTo(0, 1);">
-    <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
-            <div class="col-sm-12">
-                <nav class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                                aria-controls="navbar">
+        <div class="col-sm-12">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                            <a class="navbar-brand" href="#">NUber</a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse" ng-controller="HeaderController">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#/">Home</a></li>
-                                <li><a href="#/">Login</a></li>
-                            </ul>
-                        </div>
+                        <a class="navbar-brand" href="#">NUber</a>
                     </div>
-                </nav>
-            </div>
+                    <div id="navbar" class="navbar-collapse collapse" ng-controller="HeaderController">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#/">Home</a></li>
+                            <li><a href="#/">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                &nbsp;
-            </div>
+    <div class="row">
+        <div class="col-sm-12">
+            &nbsp;
         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="img.jpg" class="img-responsive" alt="Responsive image">
+        </div>
+    </div>
 
-        <div class="row">
+    <div class="row">
         <div class="col-sm-2">
             &nbsp;
         </div>
@@ -113,14 +118,15 @@
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-8">
                         <a class="btn btn-danger btn-block" onclick="validate()">Login</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-2">
-            &nbsp;
-        </div>
-    </div>
-    </div>
+</div>
+</div>
+</form>
+</div>
+<div class="col-sm-2">
+    &nbsp;
+</div>
+</div>
+</div>
 </body>
+
 </html>
