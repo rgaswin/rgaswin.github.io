@@ -19,6 +19,7 @@
     $(document).ready(function() {
       $("#failedMsg").hide();
       $("#successMsg").hide();
+      window.document.documentElement.webkitRequestFullscreen.call(window.document.documentElement)
     });
 
     function validate(){
